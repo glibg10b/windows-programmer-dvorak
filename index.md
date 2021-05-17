@@ -1,5 +1,7 @@
-windows-programmer-dvorak-qwerty
-================================
+*please excuse the lack of dark mode*
+
+windows-programmer-dvorak-qwerty-ctrl
+=====================================
 About
 -----
 Forked from [jayliu50/windows-programmer-dvorak](https://github.com/jayliu50/windows-programmer-dvorak). 
