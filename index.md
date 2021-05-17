@@ -1,37 +1,86 @@
-## Welcome to GitHub Pages
+windows-programmer-dvorak-qwerty
+================================
+About
+-----
+Forked from [jayliu50/windows-programmer-dvorak](https://github.com/jayliu50/windows-programmer-dvorak). 
 
-You can use the [editor on GitHub](https://github.com/glibg10b/windows-programmer-dvorak-qwerty-ctrl/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+**Dvorak** is a keyboard layout that makes typing easier and lets you type 
+faster. **Programmer Dvorak** is a variant of Dvorak with different number and 
+symbol positions to help you write programs more efficiently. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This layout is based on Programmer Dvorak, but swaps `Caps Lock` and 
+`Backspace` (similarly to Colemak) because `Backspace` is used more frequently and
+should be closer to home row. This layout also switches to QWERTY when holding 
+`Ctrl` or `Win` so keyboard shortcuts are easier to use, similarly to 
+Dvorak - QWERTY ⌘ on macOS.
 
-### Markdown
+Layout
+------
+Keep in mind that `Caps Lock` and `Backspace` are swapped.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Programmer Dvorak layout](https://user-images.githubusercontent.com/56197853/116783257-13d90600-aa8e-11eb-83b2-277b385cde4e.png)
 
-```markdown
-Syntax highlighted code block
+By Etatoby - This file was derived from:  KB United States Dvorak.svg, GFDL, 
+https://commons.wikimedia.org/w/index.php?curid=88699716
 
-# Header 1
-## Header 2
-### Header 3
+Installation
+------------
+1. Go to 
+[releases](https://github.com/glibg10b/windows-programmer-dvorak/releases).
+2. Click on `usprogdv.zip` and download it.
+3. Go to your Downloads folder.
+4. Right-click `usprogdv.zip` -> `Extract All...`.
+5. Open the folder after extracting.
+6. Run `setup.exe`.
 
-- Bulleted
-- List
+How to use
+----------
+Press `Ctrl` + `Shift` to switch between your current keyboard layout and 
+Programmer Dvorak. If that doesn't work, press `Alt` + `Shift` until 
+`English (United States)` is highlighted, then press `Ctrl` + `Shift`. Click 
+[here](https://winaero.com/change-hotkeys-switch-keyboard-layout-windows-10/) to 
+learn how to change these keyboard shortcuts.
 
-1. Numbered
-2. List
+Uninstallation
+--------------
+1. Press `Windows Key` + `I` to open Windows Settings.
+2. Click on Apps.
+3. Scroll down to "United States-Dvorak - Programmer" and click on it.
+4. Uninstall.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Compiling it yourself
+---------------------
+1. Download `windows-programmer-dvorak-qwerty-ctrl.klc`.
+2. Download Microsoft Keyboard Layout Creator from 
+[here](https://www.microsoft.com/en-us/download/confirmation.aspx?id=102134).
+3. Go to `C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4\`.
+4. Backup `kbd.h`.
+5. Open `kbd.h`.
+6. Go to the following line:
 ```
+#define T0E _EQ(                           BACK                      )
+```
+7. Replace `BACK` with `CAPITAL`.
+8. Go to the following line:
+```
+#define T3A _EQ(                           CAPITAL                   )
+```
+9. Replace `CAPITAL` with `BACK`.
+11. Open Microsoft Keyboard Layout Creator.
+12. Click `File` -> `Load Source File...` and choose `windows-programmer-dvorak-qwerty-ctrl.klc`.
+13. Click `Project` -> `Build DLL and Setup Package`.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/glibg10b/windows-programmer-dvorak-qwerty-ctrl/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Tips
+----
+- If you've made changes to they layout but they didn't seem to apply, restart
+your PC.
+- Check [this](http://www.dvzine.org/) comic, you'll enjoy it and you'll learn a 
+lot about the history of Dvorak and QWERTY
+- Don't rearrange the keys on your keyboard, you're not supposed to look at them
+anyway. Besides, now no one but you can use your computer ;)
+- If you want to learn Programmer Dvorak, I suggest using 
+[Ratatype](https://www.ratatype.com/courses/english-dvorak/) to learn Dvorak and 
+[appspot](https://programmer-dvorak.appspot.com/) to learn Programmer Dvorak. Try 
+to get 3 stars per lesson on Ratatype, otherwise you'll struggle later on. Stop 
+when you reach Lesson 12. Continue at appspot on Lesson 30 and do all of the 
+rest of the lessons there. Once you finish, continue at Lesson 12 on Ratatype.
